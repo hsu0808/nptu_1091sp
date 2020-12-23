@@ -1,6 +1,6 @@
 ENVIROMENT=$(echo $DOCKER_TAG | cut -d "-" -f1)
 
-if [ $DOCKER_TAG == "v0.0.15" ]
+if [ $DOCKER_TAG == "latest" ]
 then
   echo -e "building image using PORT: $PORT"
   docker build --build-arg PORT=$PORT -f $DOCKERFILE_PATH -t $IMAGE_NAME .
